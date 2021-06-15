@@ -44,6 +44,7 @@ case $enabled in
 		echo "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts" >> lists.txt
+		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt" >> lists.txt
 	;;&
 	*tracking* )
 		echo "https://v.firebog.net/hosts/Easyprivacy.txt" >> lists.txt
@@ -57,6 +58,7 @@ case $enabled in
 		echo "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt" >> lists.txt
 		echo "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt" >> lists.txt
+		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt" >> lists.txt
 	;;&
     *fakenews* )
         echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts" >> lists.txt
@@ -74,6 +76,7 @@ case $enabled in
 		echo "https://block.energized.pro/extensions/social/formats/hosts.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt" >> lists.txt
+		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt" >> lists.txt
 	;;&
 	*extreme* )
 		echo "https://block.energized.pro/extensions/xtreme/formats/hosts.txt" >> lists.txt
@@ -81,6 +84,8 @@ case $enabled in
 	*other* )
 		echo "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser" >> lists.txt
 		echo "https://block.energized.pro/extensions/regional/formats/hosts.txt" >> lists.txt
+		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt" >> lists.txt
+		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt" >> lists.txt
 	;;
 esac
 
