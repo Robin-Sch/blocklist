@@ -2,19 +2,20 @@
 
 Create a list with (a lot of) adblock lists. (I use this personally on my [pihole](https://pi-hole.net/))
 
-## Usage
+## How to use with the hosts file (and most other things)?
 
 Run the `select.sh` file (you need whiptail installed) to select the blocking lists
 
 Run the `generate.sh` file to generate the hosts file
 
-Put that list as your [hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file, or use them with for example NetGuard
+Put that list as your [hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file, or use it with for example NetGuard
 
 ## How to use with pihole?
 
 Run the `select.sh` file (you need whiptail installed) to select the blocking lists
 
-Copy the contents of lists.txt to [adlists](http://pi.hole/admin/groups-adlists.php)
+Copy the contents of `lists.txt` to [adlists](http://pi.hole/admin/groups-adlists.php)
+(`lists2.txt` might work too, but not sure)
 
 Run `pihole -g`, or use the [gui](http://pi.hole/admin/gravity.php)
 

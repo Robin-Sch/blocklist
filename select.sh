@@ -27,23 +27,23 @@ case $enabled in
 		echo "https://v.firebog.net/hosts/static/w3kbl.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt" >> lists.txt
 		echo "https://someonewhocares.org/hosts/zero/hosts" >> lists.txt
-		echo "https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts" >> lists.txt
+		echo "https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts" >> lists2.txt
 		echo "https://winhelp2002.mvps.org/hosts.txt" >> lists.txt
 		echo "https://v.firebog.net/hosts/neohostsbasic.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt" >> lists.txt
 		echo "https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt" >> lists.txt
 	;;&
 	*advertising* )
-		echo "https://adaway.org/hosts.txt" >> lists.txt
+		echo "https://adaway.org/hosts.txt" >> lists2.txt
 		echo "https://v.firebog.net/hosts/AdguardDNS.txt" >> lists.txt
 		echo "https://v.firebog.net/hosts/Admiral.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt" >> lists.txt
 		echo "https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt" >> lists.txt
 		echo "https://v.firebog.net/hosts/Easylist.txt" >> lists.txt
-		echo "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext" >> lists.txt
+		echo "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext" >> lists2.txt
 		echo "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts" >> lists.txt
-		echo "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts" >> lists.txt
+		echo "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts" >> lists2.txt
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt" >> lists.txt
 	;;&
 	*tracking* )
