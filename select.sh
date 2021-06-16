@@ -16,6 +16,8 @@ enabled=$(whiptail --checklist "Select which topics you want to block" $(stty si
   "gambling" "" on \
   "porn" "" on \
   "social" "" on \
+  "virusses" "" on \
+  "illegal" "" on \
   "extreme" "" on \
   "other" "" on \
   3>&1 1>&2 2>&3)
@@ -45,6 +47,7 @@ case $enabled in
 		echo "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts" >> lists2.txt
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/ads.txt" >> lists.txt
 	;;&
 	*tracking* )
 		echo "https://v.firebog.net/hosts/Easyprivacy.txt" >> lists.txt
@@ -59,24 +62,45 @@ case $enabled in
 		echo "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/AmazonFireTV.txt" >> lists.txt
 		echo "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/tracking-aggressive-extended.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/tracking.txt" >> lists.txt
 	;;&
     *fakenews* )
         echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews/hosts" >> lists.txt
     ;;&
 	*gambling* )
 		echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/gambling.txt" >> lists.txt
 	;;&
 	*porn* )
 		echo "https://block.energized.pro/extensions/porn-lite/formats/hosts.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/porn/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_all.list" >> lists.txt
 		echo "https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/porn.txt" >> lists.txt
 	;;&
 	*social* )
 		echo "https://block.energized.pro/extensions/social/formats/hosts.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social/hosts" >> lists.txt
 		echo "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/facebook-extended.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/facebook.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/tiktok.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/whatsapp.txt" >> lists.txt
+	;;&
+	*virusses* )
+		echo "https://blocklistproject.github.io/Lists/malware.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/ransomware.txt" >> lists.txt
+	;;&
+	*scam* )
+		echo "https://blocklistproject.github.io/Lists/crypto.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/fraud.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/phishing.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/scam.txt" >> lists.txt
+
+	;;&
+	*illegal* )
+		echo "https://blocklistproject.github.io/Lists/drugs.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/piracy.txt" >> lists.txt
 	;;&
 	*extreme* )
 		echo "https://block.energized.pro/extensions/xtreme/formats/hosts.txt" >> lists.txt
@@ -86,6 +110,11 @@ case $enabled in
 		echo "https://block.energized.pro/extensions/regional/formats/hosts.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/amp-hosts-extended.txt" >> lists.txt
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/hate-and-junk-extended.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/abuse.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/redirect.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/torrent.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/basic.txt" >> lists.txt
+		echo "https://blocklistproject.github.io/Lists/smart-tv.txt" >> lists.txt
 	;;
 esac
 
