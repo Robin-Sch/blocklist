@@ -1,6 +1,6 @@
 # Adblock Creator
 
-Create a list with (a lot of) adblock lists. (I use this personally on my [pihole](https://pi-hole.net/))
+Create a list with (a lot of) adblock lists. (I use this personally on my [pihole](https://pi-hole.net/)). Since a lot of sources are combined, there are a lot of duplicated entries.
 
 ## How to use with the hosts file (and most other things)?
 
@@ -15,7 +15,6 @@ Put that list as your [hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file, 
 Run the `select.sh` file (you need whiptail installed) to select the blocking lists
 
 Copy the contents of `lists.txt` to [adlists](http://pi.hole/admin/groups-adlists.php)
-(`lists2.txt` might work too, but not sure)
 
 Run `pihole -g`, or use the [gui](http://pi.hole/admin/gravity.php)
 
