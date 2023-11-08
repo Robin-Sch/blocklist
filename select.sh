@@ -72,6 +72,13 @@ case $enabled in
 		echo "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt" >> $output
 		echo "https://blocklistproject.github.io/Lists/tracking.txt" >> $output
 		echo "https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows" >> $output
+		echo "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi" >> $output
 	;;&
 	*malicious* )
 		echo "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt" >> $output
