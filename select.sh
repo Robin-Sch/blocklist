@@ -41,6 +41,7 @@ case $enabled in
 		echo "https://blocklistproject.github.io/Lists/smart-tv.txt" >> $output
 		echo "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/pro.txt" >> $output
 		echo "https://raw.githubusercontent.com/AdroitAdorKhan/antipopads-re/master/formats/hosts.txt" >> $output
+		echo "https://big.oisd.nl" >> $output
 	;;&
 	*advertising* )
 		echo "https://adaway.org/hosts.txt" >> $output
@@ -55,7 +56,6 @@ case $enabled in
 		echo "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts" >> $output
 		echo "https://raw.githubusercontent.com/lightswitch05/hosts/master/docs/lists/ads-and-tracking-extended.txt" >> $output
 		echo "https://blocklistproject.github.io/Lists/ads.txt" >> $output
-		echo "https://hosts.oisd.nl/basic/" >> $output
 		echo "https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/Frellwits-Swedish-Hosts-File.txt" >> $output
 	;;&
 	*tracking* )
@@ -96,6 +96,7 @@ case $enabled in
 		echo "https://urlhaus.abuse.ch/downloads/hostfile/" >> $output
 		echo "https://malware-filter.gitlab.io/malware-filter/phishing-filter-hosts.txt" >> $output
 		echo "https://v.firebog.net/hosts/Prigent-Malware.txt" >> $output
+		echo "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/hosts/tif.txt" >> $output
 	;;&
 	*gambling* )
 		echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/gambling/hosts" >> $output
@@ -109,6 +110,7 @@ case $enabled in
 		echo "https://blocklistproject.github.io/Lists/porn.txt" >> $output
 		echo "https://raw.githubusercontent.com/Sinfonietta/hostfiles/master/pornography-hosts" >> $output
 		echo "https://v.firebog.net/hosts/Prigent-Adult.txt" >> $output
+		echo "https://nsfw.oisd.nl" >> $output
 	;;&
 	*social* )
 		echo "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/social/hosts" >> $output

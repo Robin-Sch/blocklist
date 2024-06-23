@@ -2,13 +2,25 @@
 input=./lists.txt
 output=./hosts
 
+TMPFILE=$(mktemp)
 if [ -f "$output" ]; then rm $output; fi
 
 while read line; do curl $line >> $TMPFILE; done < $input
 
-sed -i '/^#/d' $TMPFILE # remove comments
 sed -i '/^[[:space:]]*$/d' $TMPFILE # remove empty lines
-sed -i 's/127\.0\.0\.1/0.0.0.0/g' $TMPFILE; # replace 127.0.0.1 with 0.0.0.0
+
+# Check if first line is [Adblock Plus], meaning file is in ABP format
+if [ "$(sed -n '/^\[Adblock Plus\]/p;q' $TMPFILE)"]; then
+	tail -n +2 $TMPFILE > $TMPFILE.tmp && mv $TMPFILE.tmp $TMPFILE # remove first line ([Adblock Plus]), weirdness is needed: https://stackoverflow.com/a/339941
+	sed -i '/^!/d' $TMPFILE # remove comments
+	sed -i 's/||//g' $TMPFILE # remove || from the beginning of the line
+	sed -i 's/\^//g' $TMPFILE # remove ^ from the beginning of the line
+else # probably? in HOSTS format
+	sed -i '/^#/d' $TMPFILE # remove comments
+	sed -i '/^[[:space:]]*$/d' $TMPFILE # remove empty lines
+	sed -i 's/127\.0\.0\.1/0.0.0.0/g' $TMPFILE; # replace 127.0.0.1 with 0.0.0.0
+fi
+
 sed -i '/^0\.0\.0\.0*/!s/.*/0.0.0.0 &/' $TMPFILE # if not starts with 0.0.0.0, add it
 awk '!seen[$0]++' $TMPFILE > $output # remove duplicated
 
