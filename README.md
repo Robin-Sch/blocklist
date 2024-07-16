@@ -18,6 +18,8 @@ Copy the contents of `lists.txt` to [adlists](http://pi.hole/admin/groups-adlist
 
 Run `pihole -g`, or use the [gui](http://pi.hole/admin/gravity.php)
 
+[This tool](https://github.com/yubiuser/pihole_adlist_tool) can help you select the minimal amount of adlists needed to cover all the domains, as most adlists contain cross-duplicates.
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
